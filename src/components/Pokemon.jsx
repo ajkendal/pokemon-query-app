@@ -1,3 +1,23 @@
 export function Pokemon({ pokemon }) {
-  return <p>{pokemon.name}</p>
+  return (
+    <div className='pokemon'>
+      <div className='pokemon__name'>
+        <p>{pokemon.name}</p>
+      </div>
+      <div className='pokemon__meta'>
+        <span>HP: {pokemon.maxHP}</span>
+        <span>CP: {pokemon.maxCP}</span>
+      </div>
+      <div className='pokemon__image'>
+        <img src={pokemon.image} alt={pokemon.name} />
+      </div>
+      <div className='pokemon__attacks'>
+        {/* {pokemon.attacks.special.map((attack) => (
+          <div key={attack.name}>
+            <span>{attack.name}</span>: <span>{attack.damage}</span>
+          </div>
+        ))} */}
+      </div>
+    </div>
+  )
 }
